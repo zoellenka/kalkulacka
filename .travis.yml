@@ -10,13 +10,13 @@ matrix:
 
 install:
   - python3 -m pip install --upgrade pip
-  - python3 -m pip install pyglet pytest pyinstaller
+  - python3 -m pip install pyqt5 pytest pyinstaller
 
 script:
   - python3 -m pytest -vv test_kalkulacka/
   - pyinstaller __main__.py -n kalkulacka-app
       --exclude-module tkinter
-      --add-data dama/resources:dama/resources
+      --add-data kalkulacka:kalkulacka
       -F -w
 
 deploy:
