@@ -6,7 +6,7 @@ def main():
     window = QtWidgets.QDialog()
 
     # Nacteni ovladatek
-    with open('kalkulacka.ui', encoding= 'utf-8') as f:
+    with open('kalkulacka/kalkulacka.ui', encoding= 'utf-8') as f:
         uic.loadUi(f, window)
 
     sb_operand1 = window.findChild(QtWidgets.QDoubleSpinBox, 'sb_operand1')
@@ -49,4 +49,3 @@ def main():
     window.show()
     return app.exec()
 
-main()
