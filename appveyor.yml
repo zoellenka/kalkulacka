@@ -13,7 +13,7 @@ cache:
 
 install:
 - "%PYTHON%\\python.exe -m pip install -U pip"
-- "%PYTHON%\\python.exe -m pip install pyglet pytest pyinstaller"
+- "%PYTHON%\\python.exe -m pip install pyQt5 pytest pyinstaller"
 
 build: off
 
@@ -21,7 +21,7 @@ test_script:
 - "%PYTHON%\\python.exe -m pytest test_kalkulacka"
 
 after_test:
-- "%PYTHON%\\python.exe -m PyInstaller __main__.py -n kalkulacka-app --exclude-module tkinter --add-data kalkulacka;kalkulacka -F -w"
+- "%PYTHON%\\python.exe -m PyInstaller __main__.py -n kalkulator --exclude-module tkinter --add-data kalkulacka;kalkulacka -F -w"
 
 artifacts:
 - path: dist\*
